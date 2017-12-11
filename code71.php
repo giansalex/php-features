@@ -29,6 +29,7 @@ dump([2, 3, 4]);
 // Closure
 class Test
 {
+    private const PRIVATE_CONST = 4;
     public function exposeFunction(): Closure
     {
         return Closure::fromCallable([$this, 'privateFunction']);
@@ -46,11 +47,6 @@ $privFunc('some value');
 // void
 function ab(): void {
 
-}
-
-// visibility const
-class Data {
-    private const PRIVATE_CONST = 4;
 }
 
 try {
